@@ -1,0 +1,33 @@
+#N canvas 7 154 677 380 10;
+#X declare -lib mrpeach;
+#X obj 395 408 mister;
+#X obj 471 366 import mrpeach;
+#X obj 396 188 tgl 93 0 empty empty Mse! 7 47 0 30 -257985 -1 -1 1
+1;
+#X obj 397 312 hradio 40 1 0 5 empty empty empty 0 -8 0 10 -159808
+-1 -1 1;
+#X obj 397 381 s edit;
+#X obj 49 188 projau 1;
+#X obj 49 269 projau 2;
+#X obj 49 350 projau 3;
+#X obj 49 431 projau 4;
+#X obj 518 290 kbrd;
+#X obj 518 188 tgl 93 0 empty empty Kbrd! 7 47 0 30 -4034 -1 -1 1 1
+;
+#X msg 20 252 96;
+#X msg 20 333 96;
+#X msg 20 414 96;
+#X obj 20 147 loadbang;
+#X msg 20 171 127.0.0.1;
+#X obj 396 290 mouser 1280 800;
+#X connect 2 0 16 0;
+#X connect 3 0 4 0;
+#X connect 10 0 9 0;
+#X connect 11 0 6 0;
+#X connect 12 0 7 0;
+#X connect 13 0 8 0;
+#X connect 14 0 15 0;
+#X connect 14 0 11 0;
+#X connect 14 0 12 0;
+#X connect 14 0 13 0;
+#X connect 15 0 5 0;

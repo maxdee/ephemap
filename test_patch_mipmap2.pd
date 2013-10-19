@@ -1,0 +1,48 @@
+#N canvas 838 359 830 557 10;
+#X declare -lib mrpeach;
+#X obj 5 5 import mrpeach;
+#X msg 155 337 sendtyped /ha ii \$1 \$2;
+#X msg 131 296 200 200;
+#X obj 156 229 MouseState;
+#X floatatom 170 264 5 0 0 0 - - -;
+#X floatatom 212 264 5 0 0 0 - - -;
+#X obj 198 300 pack f f;
+#X obj 107 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 107 207 metro 10;
+#X text 1 27 super+alt+m;
+#X obj 522 340 packOSC;
+#X obj 522 409 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 522 374 udpsend;
+#X msg 591 333 disconnect;
+#X msg 592 357 connect 192.168.1.255 5656;
+#X text 669 331 multicast!;
+#X text 641 387 modes \, clock \,;
+#X obj 155 430 packOSC;
+#X obj 155 499 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 155 464 udpsend;
+#X msg 224 423 disconnect;
+#X text 302 421 multicast!;
+#X msg 225 447 connect 192.168.1.\$1 5656;
+#X msg 271 390;
+#X text 301 388 ip last digit;
+#X connect 1 0 17 0;
+#X connect 2 0 1 0;
+#X connect 3 1 4 0;
+#X connect 3 2 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 1 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 10 0 12 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 17 0 19 0;
+#X connect 19 0 18 0;
+#X connect 20 0 19 0;
+#X connect 22 0 19 0;
+#X connect 23 0 22 0;
